@@ -1,30 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Income Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Real Estate Analysis</title>
 </head>
 <body>
-    <form action="/calculate" method="post">
-        <h2>Purchase Information</h2>
-        <label for="purchase_price">Purchase Price:</label>
-        <input type="number" id="purchase_price" name="purchase_price" required><br>
+    <h1>Real Estate Analysis</h1>
+    <form action="calculate" method="post">
+        <label for="property-type">Property Type:</label>
+        <select id="property-type" name="property-type">
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+        </select><br><br>
 
-        <label for="down_payment">Down Payment:</label>
-        <input type="number" id="down_payment" name="down_payment" required><br>
+        <label for="property-size">Property Size:</label>
+        <select id="property-size" name="property-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra-Large</option>
+        </select><br><br>
 
-        <!-- ... other input fields ... -->
+        <label for="property-price">Property Price:</label>
+        <input type="number" id="property-price" name="property-price"><br><br>
 
-        <h2>Income Information</h2>
-        <label for="monthly_rent">Monthly Rent:</label>
-        <input type="number" id="monthly_rent" name="monthly_rent" required><br>
+        <label for="down-payment">Down Payment:</label>
+        <input type="number" id="down-payment" name="down-payment"><br><br>
 
-        <!-- ... other input fields ... -->
+        <label for="interest-rate">Interest Rate:</label>
+        <input type="number" id="interest-rate" name="interest-rate"><br><br>
+
+        <label for="closing-costs">Closing Costs:</label>
+        <input type="number" id="closing-costs" name="closing-costs"><br><br>
+
+        <label for="insurance">Insurance:</label>
+        <input type="number" id="insurance" name="insurance"><br><br>
+
+        <label for="taxes">Taxes:</label>
+        <input type="number" id="taxes" name="taxes"><br><br>
+
+        <label for="maintenance-costs">Maintenance Costs:</label>
+        <input type="number" id="maintenance-costs" name="maintenance-costs"><br><br>
+
+        <label for="property-management-fee">Property Management Fee:</label>
+        <input type="number" id="property-management-fee" name="property-management-fee"><br><br>
+
+        <label for="hoa-dues">HOA Dues:</label>
+        <input type="number" id="hoa-dues" name="hoa-dues"><br><br>
+
+        <label for="realtor-fee">Realtor Fee:</label>
+        <input type="number" id="realtor-fee" name="realtor-fee"><br><br>
+
+        <label for="other-fees">Other Fees:</label>
+        <input type="number" id="other-fees" name="other-fees"><br><br>
+
+        <label for="expected-return">Expected Return:</label>
+        <input type="number" id="expected-return" name="expected-return"><br><br>
+
+        <label for="risk-tolerance">Risk Tolerance:</label>
+        <select id="risk-tolerance" name="risk-tolerance">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select><br><br>
+
+        <label for="time-horizon">Time Horizon:</label>
+        <select id="time-horizon" name="time-horizon">
+            <option value="short-term">Short-Term</option>
+            <option value="medium-term">Medium-Term</option>
+            <option value="long-term">Long-Term</option>
+        </select><br><br>
+
+        <label for="regulatory-requirements">Regulatory Requirements:</label>
+        <textarea id="regulatory-requirements" name="regulatory-requirements"></textarea><br><br>
+
+        <label for="funding-source">Funding Source:</label>
+        <input type="text" id="funding-source" name="funding-source"><br><br>
 
         <input type="submit" value="Calculate ROI">
-    </form> 
+    </form>
 
     <div id="results">
         <!-- Results will be displayed here -->
